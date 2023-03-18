@@ -19,7 +19,7 @@ const verifyTokenAndAuthorization = (req, res, next) => {
     if (req.user.id === req.params.id || req.user.isAdmin) {
       next();
     } else {
-      res.status(403).json("No tienes permisos para hacer esot!");
+      res.status(403).json("No tienes permisos para hacer esto!");
     }
   });
 };
@@ -29,7 +29,7 @@ const verifyTokenAndAdmin = (req, res, next) => {
     if (req.user.isAdmin) {
       next();
     } else {
-      res.status(403).json("No tienes permisos para hacer eso!");
+      res.status(403).json("No tienes permisos para hacer esto!");
     }
   });
 };
